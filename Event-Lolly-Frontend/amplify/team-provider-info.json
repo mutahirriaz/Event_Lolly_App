@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-eventlollyfrontend-dev-221952-authRole",
+      "UnauthRoleArn": "arn:aws:iam::287405436926:role/amplify-eventlollyfrontend-dev-221952-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::287405436926:role/amplify-eventlollyfrontend-dev-221952-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-eventlollyfrontend-dev-221952-deployment",
+      "UnauthRoleName": "amplify-eventlollyfrontend-dev-221952-unauthRole",
+      "StackName": "amplify-eventlollyfrontend-dev-221952",
+      "StackId": "arn:aws:cloudformation:us-east-1:287405436926:stack/amplify-eventlollyfrontend-dev-221952/7faf2710-89a0-11eb-a358-0a12c74ac309",
+      "AmplifyAppId": "du9sn2wp1gf1g"
+    }
+  }
+}

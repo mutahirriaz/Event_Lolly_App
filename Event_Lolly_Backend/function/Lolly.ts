@@ -5,5 +5,5 @@ export interface Lolly  {
     message       : string
     recipientName : string
     senderName    : string
-    lollyPath     : string
+    lollyPath    : string
 }

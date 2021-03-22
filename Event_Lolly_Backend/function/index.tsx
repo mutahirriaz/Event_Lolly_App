@@ -1,7 +1,13 @@
 import { EventBridgeEvent, Context } from 'aws-lambda';
 import { randomBytes } from 'crypto';
 import * as AWS from 'aws-sdk';
+import {Lolly} from "./Lolly"
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
+
+interface Params {
+    TableName : string | ""
+    Item: Lolly
+}
 
 exports.handler = async (event: EventBridgeEvent<string, any>, context: Context ) => {
 
@@ -9,7 +15,7 @@ exports.handler = async (event: EventBridgeEvent<string, any>, context: Context 
 
         if(event["detail-type"] === "addLolly"){
 
-            const params = {
+            const params: Params = {
                 TableName: process.env.ADDLOLLY_EVENT || "",
                 Item: {
                     flavourTop: event.detail.flavourTop,
@@ -18,11 +24,12 @@ exports.handler = async (event: EventBridgeEvent<string, any>, context: Context 
                     message: event.detail.message,
                     recipientName: event.detail.recipientName,
                     senderName: event.detail.senderName,
-                    lollyPath: randomBytes(16).toString("hex")
+                    lollyPath: event.detail.lollyPath
                 },
                 
             };
             await dynamoClient.put(params).promise()
+            
             
         }
         

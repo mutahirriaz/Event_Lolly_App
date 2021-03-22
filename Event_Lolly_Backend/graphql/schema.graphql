@@ -19,5 +19,5 @@ type Query {
 
 
 type Mutation {
-    addLolly(flavourTop: String!, flavourMiddle: String!, flavourBottom: String!, message: String!, recipientName: String!, senderName: String!): Event!
+    addLolly(flavourTop: String!, flavourMiddle: String!, flavourBottom: String!, message: String!, recipientName: String!, senderName: String!, lollyPath: String): Event!
 }
