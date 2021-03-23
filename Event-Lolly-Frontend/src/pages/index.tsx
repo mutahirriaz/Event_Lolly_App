@@ -1,3 +1,4 @@
+declare var require:any
 import React from "react";
 import Lolly from '../components/lolly';
 import Header from '../components/header/header';
@@ -29,8 +30,8 @@ export default function Home() {
 
       <div className={style.send_lolly_btn_div}>
         <button className={style.send_lolly_btn} onClick={()=> {
-          navigate(`${awsMobile.domainUrl}/login?client_id=${awsMobile.clientId}&response_type=code&scope=email+openid&redirect_uri=${awsMobile.loginRedirectUri}`)
-        }} >Sign up to Make a new lolly</button>
+          navigate("/createNew")
+        }} >Make a new lolly to send to a friend</button>
       </div>
 
     </div>
